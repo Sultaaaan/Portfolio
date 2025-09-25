@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ziad Sultan - Network Security Engineer</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+            background: linear-gradient(135deg, #1e293b, #111827, #1e293b);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        .section-header {
+            position: relative;
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+        .section-header::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 3px;
+            width: 50%;
+            background-color: #6366f1; /* Indigo-500 */
+        }
+        .timeline-container {
+            position: relative;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background-color: #475569; /* Slate-600 */
+            transform: translateX(-50%);
+            z-index: -1;
+        }
+        @media (max-width: 768px) {
+            .timeline-container::before {
+                left: 1rem;
+            }
+        }
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 1rem;
+            height: 1rem;
+            background-color: #6366f1; /* Indigo-500 */
+            border-radius: 50%;
+            transform: translateX(-50%);
+        }
+        @media (max-width: 768px) {
+            .timeline-item::before {
+                left: 1rem;
+            }
+        }
+
+        /* Custom style for the name */
+        .name-gradient {
+            background-image: linear-gradient(to right, #6366f1, #3b82f6, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body class="text-slate-200">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-slate-900 bg-opacity-90 backdrop-blur-sm shadow-md py-4">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold text-indigo-500">Ziad Sultan</a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="hover:text-indigo-400 transition-colors">About Me</a>
+                <a href="#education" class="hover:text-indigo-400 transition-colors">Education</a>
+                <a href="#experience" class="hover:text-indigo-400 transition-colors">Experience</a>
+                <a href="#projects" class="hover:text-indigo-400 transition-colors">Projects</a>
+                <a href="#services" class="hover:text-indigo-400 transition-colors">Services</a>
+                <a href="#contact" class="hover:text-indigo-400 transition-colors">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-slate-300">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 py-4 px-4 mt-2 rounded-lg mx-4">
+            <div class="flex flex-col space-y-2">
+                <a href="#about" class="block px-4 py-2 hover:bg-slate-700 rounded-md transition-colors">About Me</a>
+                <a href="#education" class="block px-4 py-2 hover:bg-slate-700 rounded-md transition-colors">Education</a>
+                <a href="#experience" class="block px-4 py-2 hover:bg-slate-700 rounded-md transition-colors">Experience</a>
+                <a href="#projects" class="block px-4 py-2 hover:bg-slate-700 rounded-md transition-colors">Projects</a>
+                <a href="#services" class="block px-4 py-2 hover:bg-slate-700 rounded-md transition-colors">Services</a>
+                <a href="#contact" class="block px-4 py-2 hover:bg-slate-700 rounded-md transition-colors">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-12">
+
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center">
+            <div class="max-w-3xl">
+                <p class="text-xl font-medium text-indigo-400">Hello, I'm</p>
+                <h1 class="text-5xl md:text-7xl font-bold mt-2 name-gradient">Ziad Sultan</h1>
+                <p class="text-2xl md:text-4xl text-slate-300 mt-2">NETWORK SECURITY ENGINEER</p>
+                <p class="text-lg text-slate-400 mt-6 max-w-2xl mx-auto">
+                    I am a passionate Network Security Engineer with a strong background in securing infrastructures and protecting systems from cyber threats. Skilled in configuring and managing firewalls, intrusion detection systems, and VPNs. I am always eager to learn new technologies and enhance security solutions to provide reliable protection for organizations.
+                </p>
+                <a href="#contact" class="inline-block mt-8 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105">
+                    Let's Work Together
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="py-20">
+            <div class="flex flex-col md:flex-row items-center md:items-start space-y-8 md:space-y-0 md:space-x-12">
+                <div class="w-full md:w-1/3">
+                    <!-- الصورة الشخصية: يمكنك استبدال رابط الصورة المؤقتة هذا برابط صورتك الخاصة. -->
+                    <img src="https://placehold.co/600x400/1e293b/6366f1?text=صورة+شخصية" alt="Ziad Sultan" class="w-full h-auto rounded-xl shadow-lg transform transition-transform hover:scale-105 duration-300">
+                </div>
+                <div class="w-full md:w-2/3">
+                    <h2 class="text-4xl font-bold section-header">About Me</h2>
+                    <p class="mt-8 text-slate-300 text-lg leading-relaxed">
+                        My name is Ziad Sultan, a Network Security Engineer with a passion for protecting systems and networks from cyber threats. I have a strong background in configuring firewalls, intrusion detection systems, and securing infrastructures. I'm always eager to improve my skills and stay updated with the latest cybersecurity technologies.
+                    </p>
+                    <h3 class="text-2xl font-semibold mt-8 text-indigo-400">Skills & Interests</h3>
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4 text-center">
+                        <div class="bg-slate-800 p-4 rounded-lg shadow-md hover:shadow-xl hover:bg-indigo-600 transition-all duration-300">PROBLEM SOLVING</div>
+                        <div class="bg-slate-800 p-4 rounded-lg shadow-md hover:shadow-xl hover:bg-indigo-600 transition-all duration-300">FIREWALLS VPN</div>
+                        <div class="bg-slate-800 p-4 rounded-lg shadow-md hover:shadow-xl hover:bg-indigo-600 transition-all duration-300">ETHICAL HACKING</div>
+                        <div class="bg-slate-800 p-4 rounded-lg shadow-md hover:shadow-xl hover:bg-indigo-600 transition-all duration-300">LINUX</div>
+                        <div class="bg-slate-800 p-4 rounded-lg shadow-md hover:shadow-xl hover:bg-indigo-600 transition-all duration-300">NETWORK SECURITY</div>
+                        <div class="bg-slate-800 p-4 rounded-lg shadow-md hover:shadow-xl hover:bg-indigo-600 transition-all duration-300">IDS/IPS</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-20">
+            <h2 class="text-4xl font-bold text-center section-header mx-auto">Education</h2>
+            <div class="mt-12 timeline-container">
+                <!-- Delta University -->
+                <div class="timeline-item flex flex-col md:flex-row md:justify-end md:text-right">
+                    <div class="w-full md:w-1/2 md:pr-12 md:pl-2">
+                        <div class="bg-slate-800 p-6 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                            <h3 class="text-xl font-bold text-indigo-400">Delta University</h3>
+                            <p class="text-slate-400 mt-1">Information Technology - Network Department</p>
+                            <p class="mt-4 text-slate-300">
+                                Senior student with a focus on network administration, cybersecurity, and information technology. My studies have built a strong foundation for my career path in network security.
+                            </p>
+                            <p class="text-sm text-slate-500 font-semibold mt-2">2022 - Present</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Nile Secondary School -->
+                <div class="timeline-item flex flex-col md:flex-row md:justify-start md:text-left">
+                    <div class="w-full md:w-1/2 md:pl-12 md:pr-2">
+                        <div class="bg-slate-800 p-6 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                            <h3 class="text-xl font-bold text-indigo-400">Nile Secondary School</h3>
+                            <p class="text-slate-400 mt-1">Secondary Education</p>
+                            <p class="mt-4 text-slate-300">
+                                Completed my secondary education, preparing me for my academic journey at Delta University.
+                            </p>
+                            <p class="text-sm text-slate-500 font-semibold mt-2">Graduated 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Experience Section -->
+        <section id="experience" class="py-20">
+            <h2 class="text-4xl font-bold text-center section-header mx-auto">Experience</h2>
+            <div class="mt-12 timeline-container">
+                <!-- Fortinet Cybersecurity Engineer -->
+                <div class="timeline-item flex flex-col md:flex-row md:justify-end md:text-right">
+                    <div class="w-full md:w-1/2 md:pr-12 md:pl-2">
+                        <div class="bg-slate-800 p-6 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                            <h3 class="text-xl font-bold text-indigo-400">Fortinet Cybersecurity Engineer</h3>
+                            <p class="text-slate-400 mt-1">DEPI-Infrastructure and Security</p>
+                            <ul class="list-disc list-inside mt-4 text-slate-300 space-y-2">
+                                <li>Studied advanced concepts of network security and cybersecurity with Fortinet technologies.</li>
+                                <li>Gained hands-on training with FortiGate firewalls, VPNs, and IPS.</li>
+                                <li>Practiced vulnerability assessment and basic penetration testing.</li>
+                            </ul>
+                            <p class="text-sm text-slate-500 font-semibold mt-2">June 2025 - Present</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Huawei Big Data Training -->
+                <div class="timeline-item flex flex-col md:flex-row md:justify-start md:text-left">
+                    <div class="w-full md:w-1/2 md:pl-12 md:pr-2">
+                        <div class="bg-slate-800 p-6 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                            <h3 class="text-xl font-bold text-indigo-400">Huawei Big Data Training Program</h3>
+                            <p class="text-slate-400 mt-1">Certified Trainee</p>
+                            <ul class="list-disc list-inside mt-4 text-slate-300 space-y-2">
+                                <li>Gained knowledge of big data concepts, architecture, and applications.</li>
+                                <li>Hands-on practice with data processing, storage, and analysis tools.</li>
+                            </ul>
+                            <p class="text-sm text-slate-500 font-semibold mt-2">2022 - 2025</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Cisco Trainings -->
+                <div class="timeline-item flex flex-col md:flex-row md:justify-end md:text-right">
+                    <div class="w-full md:w-1/2 md:pr-12 md:pl-2">
+                        <div class="bg-slate-800 p-6 rounded-xl shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl">
+                            <h3 class="text-xl font-bold text-indigo-400">Cisco Trainings (CCNA - Cybersecurity - Ethical Hacking)</h3>
+                            <p class="text-slate-400 mt-1">Certified Trainee</p>
+                            <ul class="list-disc list-inside mt-4 text-slate-300 space-y-2">
+                                <li>Gained practical experience in computer networks.</li>
+                                <li>Configured routers and switches, and secured networks with VLANs and VPNs.</li>
+                            </ul>
+                            <p class="text-sm text-slate-500 font-semibold mt-2">2022 - 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20">
+            <h2 class="text-4xl font-bold text-center section-header mx-auto">Selected Projects</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <!-- Project 1 -->
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg transform transition-transform hover:scale-105 duration-300">
+                    <img src="https://placehold.co/600x400/1e293b/6366f1?text=NETWORK+DESIGN" alt="Secure Network Design" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-indigo-400">Secure Network Design for Small Business</h3>
+                    <p class="text-slate-400 mt-2">Designed and implemented a secure network infrastructure including VLAN segmentation, firewall configuration, and VPN for remote users.</p>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg transform transition-transform hover:scale-105 duration-300">
+                    <img src="https://placehold.co/600x400/1e293b/6366f1?text=PENETRATION+TESTING" alt="Vulnerability Assessment" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-indigo-400">Vulnerability Assessment & Pen Testing Lab</h3>
+                    <p class="text-slate-400 mt-2">Built a virtual penetration lab using tools like Nmap and Wireshark to test vulnerabilities and simulate attacks.</p>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg transform transition-transform hover:scale-105 duration-300">
+                    <img src="https://placehold.co/600x400/1e293b/6366f1?text=FIREWALL+CONFIGURATION" alt="Fortinet Configuration" class="rounded-lg mb-4">
+                    <h3 class="text-xl font-bold text-indigo-400">Fortinet Firewall & IPS Configuration</h3>
+                    <p class="text-slate-400 mt-2">Configured FortiGate firewall with IPS, applied security policies, monitored traffic, and tested defense against common network threats.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20">
+            <h2 class="text-4xl font-bold text-center section-header mx-auto">Services Offered</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
+                <!-- Service 1 -->
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center transform transition-transform hover:scale-105 duration-300">
+                    <div class="text-6xl text-indigo-500 mb-4"><i class="fas fa-shield-alt"></i></div>
+                    <h3 class="text-xl font-bold text-indigo-400">Network Security Assessment</h3>
+                    <p class="text-slate-400 mt-2">Comprehensive evaluation of your network to identify vulnerabilities and ensure strong protection.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center transform transition-transform hover:scale-105 duration-300">
+                    <div class="text-6xl text-indigo-500 mb-4"><i class="fas fa-bug"></i></div>
+                    <h3 class="text-xl font-bold text-indigo-400">Penetration Testing</h3>
+                    <p class="text-slate-400 mt-2">Simulated real-world attacks to test infrastructure resilience, with detailed reports and solutions.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center transform transition-transform hover:scale-105 duration-300">
+                    <div class="text-6xl text-indigo-500 mb-4"><i class="fas fa-user-shield"></i></div>
+                    <h3 class="text-xl font-bold text-indigo-400">Cybersecurity Consulting</h3>
+                    <p class="text-slate-400 mt-2">Continuous monitoring and rapid response to threats, minimizing downtime and impact.</p>
+                </div>
+            </div>
+        </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20">
+            <h2 class="text-4xl font-bold text-center section-header mx-auto">Get In Touch</h2>
+            <div class="flex flex-col items-center mt-12">
+                <p class="text-xl text-slate-300 text-center">Let's Work Together</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8 w-full max-w-4xl">
+                    <!-- Email -->
+                    <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center transform transition-transform hover:scale-105 duration-300">
+                        <i class="fas fa-envelope text-4xl text-indigo-500 mb-4"></i>
+                        <h4 class="font-semibold text-xl">Email</h4>
+                        <a href="mailto:zyadsoltan4@gmail.com" class="text-slate-400 hover:text-indigo-400 mt-1">zyadsoltan4@gmail.com</a>
+                    </div>
+                    <!-- Phone -->
+                    <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center transform transition-transform hover:scale-105 duration-300">
+                        <i class="fas fa-phone text-4xl text-indigo-500 mb-4"></i>
+                        <h4 class="font-semibold text-xl">Phone</h4>
+                        <p class="text-slate-400 mt-1">01552697846</p>
+                    </div>
+                    <!-- Location -->
+                    <div class="bg-slate-800 p-6 rounded-xl shadow-lg flex flex-col items-center text-center transform transition-transform hover:scale-105 duration-300">
+                        <i class="fas fa-map-marker-alt text-4xl text-indigo-500 mb-4"></i>
+                        <h4 class="font-semibold text-xl">Address</h4>
+                        <p class="text-slate-400 mt-1">Shebin El-Kom-Menoufia</p>
+                    </div>
+                </div>
+                <!-- Social Media -->
+                <div class="mt-8 flex space-x-6 text-2xl">
+                    <a href="https://www.linkedin.com/in/ziad-m-sultan" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/ziad.m.sultan/" target="_blank" rel="noopener noreferrer" class="hover:text-indigo-400 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1ctwkJCgiXam_Onpd3VrxsUikHk1tLbUY/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-full shadow-lg transition-transform transform hover:scale-105 text-base">
+                        Download My CV
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="bg-slate-900 border-t border-slate-700 py-6 text-center text-sm text-slate-500">
+        <p>Thank you for reviewing my portfolio.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Hide mobile menu after clicking a link
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        // Toggle mobile menu
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
